@@ -15,8 +15,15 @@
 \usepackage{tcolorbox}
 \usepackage{eso-pic}
 \usepackage{fontawesome5}
-\usepackage{tocloft}  % 用于自定义目录样式
+\usepackage{tocloft}
 
+% 文献引用
+\usepackage[utf8]{inputenc}
+\usepackage[backend=biber,style=numeric,citestyle=numeric]{biblatex}  
+\addbibresource{references.bib}  % 引入 references.bib 文件
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black}
+
+% 设置图片目录
 \graphicspath{{Figures/}}
 
 \definecolor{blackk}{HTML}{0d0d0d}
@@ -38,19 +45,19 @@
 
 % 自定义标题样式
 \titleformat{\section}
-  {\normalfont\Large\bfseries\color{cyan}}    % 一级标题青色
+  {\normalfont\Large\bfseries\color{black}}    % 一级标题青色
   {\thesection}{1em}{}
 
 \titleformat{\subsection}
-  {\normalfont\large\bfseries\color{lightblue}} % 二级标题浅蓝色
+  {\normalfont\large\bfseries\color{cyan}} % 二级标题浅蓝色
   {\thesubsection}{1em}{}
 
 \titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries\color{darkgreen}} % 三级标题墨绿色
+  {\normalfont\normalsize\bfseries\color{lightblue}} % 三级标题墨绿色
   {\thesubsubsection}{1em}{}
 
 \titleformat{\paragraph}
-  {\normalfont\normalsize\bfseries\color{brownyellow}} % 四级标题棕黄色
+  {\normalfont\normalsize\bfseries\color{darkgreen}} % 四级标题棕黄色
   {\theparagraph}{1em}{}
 
 % 修改目录的字体颜色为黑色
@@ -58,7 +65,7 @@
     colorlinks=true,
     linkcolor=black,  % 将目录超链接设置为黑色
     urlcolor=magenta,
-    citecolor=green,
+    citecolor=black,
     pdfborder={0 0 0}
 }
 
@@ -68,7 +75,7 @@
 \fancyhead[L]{\leftmark}
 \fancyhead[R]{\thepage}
 
-\fancyfoot[R]{\href{https://github.com/Ethan}{\faGithub\ Ethan}}
+\fancyfoot[R]{\href{https://github.com/hanlife02}{\faGithub\ Ethan}}
 
 % 代码高亮设置
 \lstset{
