@@ -29,5 +29,7 @@ This is a LaTex template used for daily study and note-taking
 
 如果需要章节换页，记得每个chapter后面\newpage
 
+关于预览，每一个chapter.tex或者main.tex都会预览打开main.pdf
+
 如果你有更高的要求或其他的审美需求，修改配置即可~
 
