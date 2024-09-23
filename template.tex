@@ -1,7 +1,7 @@
 % template.tex
 
 % 引入必要的包
-\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{amsmath, amssymb, amsfonts,amsthm}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{fancyhdr}
@@ -87,8 +87,16 @@
     breaklines=true
 }
 
-% 自定义彩色信息框
-\newtcolorbox{info}[1][]{
-  colback=blue!5!white, colframe=blue!75!black,
-  fonttitle=\bfseries, title=#1
-}
+% 设置自定义样式的定理框
+\tcbuselibrary{theorems}
+% 定义定理的样式
+\newtcolorbox{dl}[1][]{colback=red!5!white,colframe=red!75!black,
+    fonttitle=\bfseries,title=定理, #1}
+
+% 定义定义的样式
+\newtcolorbox{dy}[1][]{colback=green!5!white,colframe=green!75!black,
+    fonttitle=\bfseries,title=定义, #1}
+
+% 定义公式的样式
+\newtcolorbox{gs}[1][]{colback=blue!5!white,colframe=blue!75!black,
+    fonttitle=\bfseries,title=公式, #1}
