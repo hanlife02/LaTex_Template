@@ -31,5 +31,7 @@ This is a LaTex template used for daily study and note-taking
 
 关于预览，每一个chapter.tex或者main.tex都会预览打开main.pdf
 
+哦对了，以防你不知道，自动生成目录需要编译两次，直接使用LaTeXmk就可以
+
 如果你有更高的要求或其他的审美需求，修改配置即可~
 
